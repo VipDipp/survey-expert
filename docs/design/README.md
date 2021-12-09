@@ -84,7 +84,7 @@ Password --* User
 Salt -l-* User
 Authorization_Token -u-* User
 Poll "0,*"--*"1,1" User
-Organization "0,*"--*"1,*" User
+Organization "0,*"--*"0,*" User
 PollFeedback "0,*"--*"1" User
 
 Organization.Name -l-* Organization
@@ -148,7 +148,7 @@ Rating --* PollFeedback
 MaxRating --* PollFeedback
 Reviewer -u-* PollFeedback
 PF_Poll -u-* PollFeedback
-QuestionFeedback "0,*"-u-*"1,*" PollFeedback
+QuestionFeedback "0,*"-u-*"1,1" PollFeedback
 
 @enduml
 
