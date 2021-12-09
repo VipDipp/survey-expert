@@ -20,7 +20,6 @@ entity Picture #aaaeee
 entity Address #aaaeee
 entity Poll
 
-entity PollType #eeffff
 entity PollType.Name
 entity PollType.Description #aaaeee
 
@@ -41,7 +40,7 @@ entity IsWhiteList
 entity IsBlackList
 entity IsPrivate
 entity Link
-entity Poll.Type
+entity Poll.Type #eeffff
 
 
 entity QuestionType #eeffff
@@ -63,7 +62,6 @@ entity Content
 
 entity PollResult #eeffff
 entity Date
-entity PR_Comment #aaaeee
 entity Respondent
 
 
@@ -85,7 +83,7 @@ Email -r-* User
 Password --* User
 Salt -l-* User
 Authorization_Token -u-* User
-Poll "0,*"--*"0,*" User
+Poll "0,*"--*"1,1" User
 Organization "0,*"--*"1,*" User
 PollFeedback "0,*"--*"1" User
 
@@ -97,8 +95,8 @@ Picture -d-* Organization
 Address -r-* Organization
 Poll "0,*"--*"1" Organization
 
-PollType.Name -u-* PollType
-PollType.Description --* PollType
+PollType.Name -u-* Poll.Type
+PollType.Description --* Poll.Type
 
 BlackListedUser -u-* BL_User
 BlackListedUser --* BL_Poll
@@ -118,7 +116,7 @@ IsBlackList -l-* Poll
 IsPrivate -r-* Poll
 Link -u-* Poll
 Poll.Type -d-* Poll
-Question "1"--*"1,*" Poll
+Question "1"--*"0,*" Poll
 
 QuestionType.Name -u-* QuestionType 
 QuestionType.Description -d-* QuestionType
@@ -130,9 +128,9 @@ Index --* AnswerOption
 
 AnswerOption --* Question
 Question --* Question.Type
-Title --* Question.Title
-Question.Description --* Question
-AnswerFeedback "0,*"--*"1,*" Question
+Question.Title --* Question
+Question.Description -l-* Question
+AnswerFeedback "0,*"--*"1,1" Question
 
 Answer --* Content
 Answer --* Question
@@ -140,17 +138,17 @@ Answer --* Question
 Date --* PollResult
 Comment --* PollResult
 Respondent --* PollResult
-Answer "1,*"--*"1" PollResult
+Answer "0,*"--*"1" PollResult
 
 QF_Comment --* QuestionFeedback
 QuestionFeedback *--* QF_Question
 
-GeneralComment --* PoolFeedback
+GeneralComment -l-* PollFeedback
 Rating --* PollFeedback
 MaxRating --* PollFeedback
 Reviewer -u-* PollFeedback
 PF_Poll -u-* PollFeedback
-QuestionFeedback "0,*"--*"1,*" PollFeedback
+QuestionFeedback "0,*"-u-*"1,*" PollFeedback
 
 @enduml
 
