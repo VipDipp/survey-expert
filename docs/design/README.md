@@ -133,7 +133,7 @@ Question.Description -l-* Question
 AnswerFeedback "0,*"--*"1,1" Question
 
 Answer --* Content
-Answer --* Question
+Answer "0,*"--*"1,1" Question
 
 Date --* PollResult
 Comment --* PollResult
