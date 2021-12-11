@@ -115,18 +115,18 @@ IsWhiteList --* Poll
 IsBlackList -l-* Poll
 IsPrivate -r-* Poll
 Link -u-* Poll
-Poll.Type -d-* Poll
+Poll.Type "0,*"-d-*"1" Poll
 Question "1"--*"0,*" Poll
 
 QuestionType.Name -u-* QuestionType 
 QuestionType.Description -d-* QuestionType
-QuestionType -- Question
-QuestionType -- Answer
+QuestionType "0,*"--"1" Question
+QuestionType "0,*"--"1,1" Answer
 
 Text --* AnswerOption
 Index --* AnswerOption
 
-AnswerOption --* Question
+AnswerOption "0,*"--*"1" Question
 Question --* Question.Type
 Question.Title --* Question
 Question.Description -l-* Question
