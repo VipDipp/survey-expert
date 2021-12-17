@@ -3,13 +3,13 @@
     const questionRouter = express.Router();
 
     questionRouter
-        .get(questionController.getAllQuestion)
         .route('/')
+        .get(questionController.getAllQuestion)
         .post(questionController.createQuestion);
 
     questionRouter
-        .get(questionController.getQuestion)
         .route('/:id')
+        .get(questionController.getQuestion)
         .patch(questionController.updateQuestion)
         .delete(questionController.deleteQuestion);
 
