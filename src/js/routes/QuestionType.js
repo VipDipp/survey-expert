@@ -3,13 +3,13 @@ const questionTypeController = require('../controllers/QuestionType.js');
 const questionTypeRouter = express.Router();
 
 questionTypeRouter
-    .get(questionTypeController.getAllQuestionType)
     .route('/')
+    .get(questionTypeController.getAllQuestionType)
     .post(questionTypeController.createQuestionType);
 
 questionTypeRouter
-    .get(questionTypeController.getQuestionType)
     .route('/:id')
+    .get(questionTypeController.getQuestionType)
     .patch(questionTypeController.updateQuestionType)
     .delete(questionTypeController.deleteQuestionType);
 
