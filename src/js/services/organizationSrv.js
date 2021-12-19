@@ -4,8 +4,8 @@ const sequelize = initModels(sequelizeObject);
 
 const Organization = sequelize.Organization;
 const organizationService = {
-    async insert(task) {
-        const newOrganization = await Organization.create(task);
+    async insert(organization) {
+        const newOrganization = await Organization.create(organization);
         return newOrganization.dataValues.id;
     },
 
