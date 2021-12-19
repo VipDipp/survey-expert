@@ -9,7 +9,7 @@ const organizationService = {
         return newOrganization.dataValues.id;
     },
 
-    async getById(id) {
+    async read(id) {
         const organization = await Organization.findByPk(id);
         return organization;
     },
@@ -20,13 +20,13 @@ const organizationService = {
         });
     },
 
-    async deleteById(id) {
+    async delete(id) {
         await Organization.destroy({
             where: { id: id }
         });
     },
 
-    async getAll() {
+    async selectAll() {
         const organizations = await Organization.findAll();
         return organizations;
     }
