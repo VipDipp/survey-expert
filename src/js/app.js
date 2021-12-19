@@ -13,12 +13,10 @@ for (const route of routes) {
 
 // connect to database
 const sequelizeObject = require('./db');
-const initModels = require('./models/init-models');
-const sequelize = initModels(sequelizeObject);
 
 // start server
 void async function() {
-  await sequelize.sync({ force: false });
+  await sequelizeObject.sync({ force: false });
 
   server.listen(process.env.EXPRESS_PORT, () => {
     console.log(`Server started!`);
