@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Модель прецедентів | Survey Expert. Система управління експертними опитуваннями</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/survey-expert/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="description" content="Курсова робота з дисципліни "Бази даних"">
+    
+    <link rel="preload" href="/survey-expert/assets/css/0.styles.ecc73f2f.css" as="style"><link rel="preload" href="/survey-expert/assets/js/app.40677592.js" as="script"><link rel="preload" href="/survey-expert/assets/js/2.b3f7f95f.js" as="script"><link rel="preload" href="/survey-expert/assets/js/24.dcf06088.js" as="script"><link rel="prefetch" href="/survey-expert/assets/js/10.2335d171.js"><link rel="prefetch" href="/survey-expert/assets/js/11.635499d7.js"><link rel="prefetch" href="/survey-expert/assets/js/12.95061cd2.js"><link rel="prefetch" href="/survey-expert/assets/js/13.06fdf018.js"><link rel="prefetch" href="/survey-expert/assets/js/14.6bf8c30d.js"><link rel="prefetch" href="/survey-expert/assets/js/15.62c4ca41.js"><link rel="prefetch" href="/survey-expert/assets/js/16.dcdad092.js"><link rel="prefetch" href="/survey-expert/assets/js/17.e098781f.js"><link rel="prefetch" href="/survey-expert/assets/js/18.1c14d2b3.js"><link rel="prefetch" href="/survey-expert/assets/js/19.e50e0cf1.js"><link rel="prefetch" href="/survey-expert/assets/js/20.3b950501.js"><link rel="prefetch" href="/survey-expert/assets/js/21.fe0f0c78.js"><link rel="prefetch" href="/survey-expert/assets/js/22.a8e39070.js"><link rel="prefetch" href="/survey-expert/assets/js/23.a12a75e6.js"><link rel="prefetch" href="/survey-expert/assets/js/25.bae6b6e2.js"><link rel="prefetch" href="/survey-expert/assets/js/26.92f11a01.js"><link rel="prefetch" href="/survey-expert/assets/js/3.7637e932.js"><link rel="prefetch" href="/survey-expert/assets/js/4.75b28055.js"><link rel="prefetch" href="/survey-expert/assets/js/5.723757c6.js"><link rel="prefetch" href="/survey-expert/assets/js/6.c6360e74.js"><link rel="prefetch" href="/survey-expert/assets/js/7.348fcbec.js"><link rel="prefetch" href="/survey-expert/assets/js/8.3ddb516f.js"><link rel="prefetch" href="/survey-expert/assets/js/9.10dd557b.js">
+    <link rel="stylesheet" href="/survey-expert/assets/css/0.styles.ecc73f2f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/survey-expert/" class="home-link router-link-active"><!----> <span class="site-name">Survey Expert. Система управління експертними опитуваннями</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/survey-expert/" class="nav-link">
+  Початок
+</a></div> <a href="https://github.com/MatthewKirik/survey-expert" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/survey-expert/" class="nav-link">
+  Початок
+</a></div> <a href="https://github.com/MatthewKirik/survey-expert" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/survey-expert/intro/" class="sidebar-link">Вступ</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/survey-expert/requirements/" class="sidebar-heading clickable"><span>Розроблення загальних вимог до системи</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/survey-expert/use%20cases/" aria-current="page" class="active sidebar-link">Розроблення вимог до функціональности системи</a></li><li><a href="/survey-expert/design/" class="sidebar-link">Проектування інформаційного забезпечення</a></li><li><a href="/survey-expert/software/" class="sidebar-link">Реалізація інформаційного та програмного забезпечення</a></li><li><a href="/survey-expert/test/" class="sidebar-link">Тестування працездатності системи</a></li><li><a href="/survey-expert/conclusion/" class="sidebar-link">Висновки</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="модель-прецедентів"><a href="#модель-прецедентів" class="header-anchor">#</a> Модель прецедентів</h1> <p>В даному файлі наведені графічні діаграми що відображують бізнес процеси.</p> <p>Вбудовування зображень діаграм здійснюється з використанням сервісу <a href="https://jace-dev.herokuapp.com/design/uml-editor#/" target="_blank" rel="noopener noreferrer">UML Editor<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>, що створений Андрієм Болдаком.</p> <p>В markdown-файлі використовується опис діаграми.</p> <ul><li>Загальна діаграма бізнес процесів:</li></ul> <p><img src="https://user-images.githubusercontent.com/31734600/140572975-c14cbd2f-3259-4dd5-9b75-cf22e9784751.png" alt="General Diagram"> <br><br><br> <strong>Діаграми прецедентів</strong> <br><br></p> <ul><li><p>ID: v1.NOT_LOGGED.001</p> <center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;"><img src="https://www.plantuml.com/plantuml/svg/bLLFRn917BtpAIRrQd2v0YKzj6bCZBruy6QANMmJoXgwUZ0SA1ZgmPIcGKhQOhLDwiMO5KNf7vQlyEOR-MPOWLbMivs4CCoVttk_zzw4fHrtlUo-sYuc4Y8OHRlWYarxVSCkJzRqo1QSaYkUEqMdl6XPbjZPUcClfgnSDfzxk9pEFiZdnEjKyl7QasUFrbPNLvQJbfMANG5T7E08XpWOL-BSarNqPKlkofgioZfwNAbXmD_lXQmBkQldDVHnAzlnWIxmXL2V2TZ1CJe1t35ymkc20TJUVS5J4mXuyI7Ey06V-6aHx1GVsTKO9bw5A2u2G_G5VfkYm5Uxt1hWQbwIP7p2YkmHoPxWAywfpdcWIbSZgEgSVCUDREDwkaGs62d4-427MlGJVAC9NJIKmXqYNX3p4WtitK4cCsihJysusQMDlo6UBbQYfAsOSFf1c4jf9KIGFVRloPRWrv12Z71DsHUetzGJJpPaMpONH6QkoXcFqJxyr3KC9_KjN64esqBjipodQRC4XVFnW-U6pEP8Py6dANmEDNXgnPVlr3HZz6o4kF9FKZsohigcQcuqvJdc4OVhBAWQ9SUrHNdhnQOhxXKATCuA-Seud9B_BzmmJhGYmlfyfClp1vNR2YyHxauttbEcottLsVzIhAVXvWSKRM1MZTPYV5BCNilCqU6E5xYlA8IZg9umpPLlzTPj4ALzSb9EXrXCEYDNPK0pt1sZ0d-cFrdFtFajE2zvPudoyY_Y3m00" alt="uml diagram"></center></li> <li><p>ID: v1.NOT_LOGGED.002</p> <center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;"><img src="https://www.plantuml.com/plantuml/svg/hLHDRzD05BpdLporroguS4lJg8TM5HAY5mxSK4CTMYd4A3KSK0v92-cbGbKKqgWV55e9BgXosuH-uV0NPlyHi-i4xDW82x6IvTtrlfdtPjvwRjrThheldvSp6J6ZR9TSMRMNL-pgSCUCVCcfkFBKAJlLMSkoP7tjjJqxRHNonSBz-Lp-Jh4WhwQp3vSUFNcmjBYuC9-rhBifut687UoYXPq0XwjpjO61gkCAbseJv_2ulb8DjIrgKrJ3p3VGntVLIKjoWYy4_aIoBlRG7LBj1JGQRaYqDIKyzOi0Nbg28xp7HpvjKXtW0-i9IDB49-KXkEIhZhvgc-qw1le3VAfo7TSX--yyFlf2u93e_u5AIwBbsAKS-_YAOwf_R0IXl7qDhXfYYZeZA-rD2zeo1kxZb8OUegdTwXBzXFYVqSHMQj6Z_RhmE6tB9iJT6yNPbPNHvHbjrP94huM9p1KCR-I4bGrx7ZUSjOKldrhzm0tjc41BlLKTz2PaPYpkYFt2da4lY8gwwgacewufVKVq2Jt9XG4ewm0NFECBmpmXdsSykbNRCw6A8XUa5ar1vyKFlad_3LVCE2WWfWAytw1wL1pNbkhQirLN9aibQcv5_A3v1ypb6svP3G5YHXSJFHq_fZtIJ9anwRpeR-UFEKyPRIAo-GpkZNoAXT2n92FKk_ZL2klnzyRHhUEyOCmSQ-8__2S0" alt="uml diagram"></center></li> <li><p>ID: v1.USER.001</p> <center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;"><img src="https://www.plantuml.com/plantuml/svg/jLLTJnD157sslsA2hsRT4fzAQKYW8IP24pyItmoLBP3KhYch3wOF0W8l9XA2fP4lWGHVZ6aGiHIx_Gjd_f5dPjYsAulPL3j9azqxU-USUywzqx55RwRilNfHJ2I4NaMdu8bvPsRMALz5z4eNt98ddhj5jpngsxPON7ZZZ2RjJ3gVkJ-HIj_DPyJhfFNaKVQXPTl9c9dOmmQsiOaDSy8jxCjb-HOD_49TBgCXS8OwMhAg7Yxb1u4sjtsv2f-1S_n0YxiC-sYZmTmLdAe45OpBuHXVoEAGN6huX9fXmYTV4P5BmQ5o_OxWLpf2N1AC2t20Z_ZCtnQXTh7FSWr8dFme7e8LdfA4ti1FrcvgRk12o1KXbxeaPTNg7qLviAM4zw_YRVqY25atScjO7zzLCC81Awv2IfrjghE3hpYY6KTQ7mesQEytjUSx-COUsCEQChX61iVaS88rhCVsYRq_dNlyx45kSZ8xOMMVSWZknSmRpqrDvQPDJhAFdE4WnodD1eCRX2fHpbPwGVJuzmPIWaheuMCZDKqBDBNDRJJPNaCuK3RWmindXFX3OgI7G6XaAc4aMQMJz56ZlUCR0GpUDTAeTmzLg-HwZYWlpCrxudQXG7dia7JqTfVSpd79iU01rtpCHrhsvsTAKeKKWavn05haP1fH5V_-N-wf0TGLQgcODONkbB_OqAdGxrxLGNLdvXwIgmEkQJXcJNH9SRgX5ZRpVx7jXY5BT6Xqb3AozezfZOH7rtr95cCidl_Vlm40" alt="uml diagram"></center></li> <li><p>ID: v1.USER.002</p> <center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;"><img src="https://www.plantuml.com/plantuml/svg/jLLTInjH47ttLrpiQqatsgSOWr232DL0Fy0tCNLJXJHRuhOF9Gzg6ks3e8Z6KBzQXVQbb62Dhacp-Gjp_r7Fp6QRRDt2DiM5mExipZtdp9oPJApO2qNxpQlyq92IAs_cRBLaBYoQnMv4hcJEAjZgXPMtYkE6OQYLvNVcUDn89REfwSb4ya4sfTx6Oy-Vff_436CaOYOTqmuTq2xjo0bqejVrAZdqa-fwdHn5brIdjgxoJKjlA-hWjQihv29mHGrguot2BdN8GMwPBZY1Wr4PdDDNSFWC9ZNwI3LF2UvS9gBN_4Frvds5hoG2N12C2d1A-_G9lpr07T49n7eWKVB3U2Wel009UK7NqEvfTkX6wRBIQpsIkXeR78LxiCU5TxlnZZmeGDQzSWkiIpyu6DA1_y1kIh11JO2q-NZfEzte3ontS3Jk1_VY0Bquf6zqXjQVUTOxvPDrbIL2UgldBO4MrRYfwqe_g1AMrmYrz1ON19ogVo7egmf8ZMwZNV7d8Ns7NuzfWyrO0_zpAFX26xGPsLEOqjdCi_d7cQcfz6GiFOTnVHWnxr5cPYOpw-N41yWP6I1drCyn2ul-Ml93fJ3tbFf1PBdr1n8ArPFbWa5fUXPlYeqxS5jP3SCRc2zgw5MOpV6sK4WtXzLO7ut0OYW5ySHJS9DWliSJO3pK43Vq3kMhODccAYw_NBBLlLmEHJ821OGhZi3j2cvr-81R3iY6DllFpxYmZ1I0Ja1oGzoDeK0jjfaoZm8Nns6xyruMyblTDGqjbT_Z4drHtu7aW7yYocs3pwNlXrkTWJF0_8utnDW_6TjwZUyde0R_tRy0" alt="uml diagram"></center></li></ul> <ul><li><p>ID: v1.USER.003</p></li> <li><p>НАЗВА: Отримати зворотній зв'язок стосовно надісланого опитування</p></li> <li><p>УЧАСНИКИ: Користувач, Система</p></li> <li><p>ПЕРЕДУМОВИ:</p></li> <li><ul><li><ol><li>Користувач авторизований у системі.</li></ol></li></ul></li> <li><ul><li><ol start="2"><li>Користувач має доступ до запитаного опитування.</li></ol></li></ul></li> <li><ul><li><ol start="3"><li>Користувач коректно пройшов опитування.</li></ol></li></ul></li> <li><ul><li><ol start="4"><li>У системі є дані про зворотній зв'язок стосовно опитування</li></ol></li></ul></li> <li><p>РЕЗУЛЬТАТ: Зворотній зв'язок стосовно надісланого опитування</p></li> <li><p>ВИКЛЮЧНІ СИТУАЦІЇ:</p></li> <li><ul><li><ol><li>v1.NOT_LOGGED.EX.004</li></ol></li></ul></li> <li><ul><li><ol start="2"><li>v1.COMMON.EX.001</li></ol></li></ul></li> <li><ul><li><ol start="3"><li>v1.COMMON.EX.002</li></ol></li></ul></li> <li><ul><li><ol start="4"><li>v1.COMMON.EX.003</li></ol></li></ul></li> <li><p>ОСНОВНИЙ СЦЕНАРІЙ:</p></li> <li><ul><li><ol><li>Користувач натискає на отримання даних про зворотній зв'язок стосовно опитування.</li></ol></li></ul></li> <li><ul><li><ol start="2"><li>Система шукає користувача у базі даних користувачів та ідентифікує його (можлива v1.NOT_LOGGED.EX.004)</li></ol></li></ul></li> <li><ul><li><ol start="3"><li>Система перевіряє, чи існує задане опитування (можлива v1.COMMON.EX.001)</li></ol></li></ul></li> <li><ul><li><ol start="4"><li>Система перевіряє, чи є доступ у користувача до заданого опитування (можлива v1.COMMON.EX.002)</li></ol></li></ul></li> <li><ul><li><ol start="5"><li>Система перевіряє правильність даних про проходження користувачем опитування (можлива v1.COMMON.EX.003)</li></ol></li></ul></li> <li><ul><li><ol start="6"><li>Система шукає дані про задане опитування.</li></ol></li></ul></li> <li><ul><li><ol start="7"><li>Система надає користувачу дані про зворотній зв'язок стосовно опитування.</li></ol></li></ul></li> <li><ul><li><ol start="8"><li>Користувач завершує взаємодію.</li></ol></li></ul></li></ul> <p><img src="https://user-images.githubusercontent.com/71893656/140197276-debab64a-fafa-4c26-847b-cc870ed12374.png" alt="image"> <br><br></p> <ul><li><p>ID: v1.ORGANIZATION.001</p></li> <li><p>НАЗВА: Створити організацію</p></li> <li><p>УЧАСНИКИ: Користувач, Система</p></li> <li><p>ПЕРЕДУМОВИ:Користувач авторизований у системі.</p></li> <li><p>РЕЗУЛЬТАТ: Повідомлення про створення організації</p></li> <li><p>ВИКЛЮЧНІ СИТУАЦІЇ:</p></li> <li><ul><li><ol><li>v1.NOT_LOGGED.EX.004</li></ol></li></ul></li> <li><ul><li><ol start="2"><li>v1.COMMON.EX.003</li></ol></li></ul></li> <li><p>ОСНОВНИЙ СЦЕНАРІЙ:</p></li> <li><ul><li><ol><li>Користувач надсилає запит на створення організації.</li></ol></li></ul></li> <li><ul><li><ol start="2"><li>Система шукає користувача у базі даних користувачів та ідентифікує його (можлива v1.NOT_LOGGED.EX.004)</li></ol></li></ul></li> <li><ul><li><ol start="3"><li>Система надає користувачу форму для заповнення даних про організацію.</li></ol></li></ul></li> <li><ul><li><ol start="4"><li>Користувач надає у формі потрібні дані про організацію.</li></ol></li></ul></li> <li><ul><li><ol start="5"><li>Система перевіряє правильність надісланих даних (можлива v1.COMMON.EX.003)</li></ol></li></ul></li> <li><ul><li><ol start="6"><li>Система створює організацію.</li></ol></li></ul></li> <li><ul><li><ol start="7"><li>Система надсилає користувачу дані про створення організації.</li></ol></li></ul></li> <li><ul><li><ol start="8"><li>Користувач завершує взаємодію.</li></ol></li></ul></li></ul> <p><img src="https://user-images.githubusercontent.com/71893656/140225337-4bb7d7fa-2964-44d7-b7f1-fef4dde5ddbb.png" alt="image"> <br><br></p> <ul><li><p>ID: v1.ORGANIZATION.002</p></li> <li><p>НАЗВА: Отримати дані про організацію</p></li> <li><p>УЧАСНИКИ: Користувач, Система</p></li> <li><p>ПЕРЕДУМОВИ:</p></li> <li><ul><li><ol><li>Користувач авторизований у системі.</li></ol></li></ul></li> <li><ul><li><ol start="2"><li>Користувач має доступ до запитаної організації.</li></ol></li></ul></li> <li><p>РЕЗУЛЬТАТ: Дані про організацію</p></li> <li><p>ВИКЛЮЧНІ СИТУАЦІЇ:</p></li> <li><ul><li><ol><li>v1.NOT_LOGGED.EX.004</li></ol></li></ul></li> <li><ul><li><ol start="2"><li>v1.COMMON.EX.001</li></ol></li></ul></li> <li><ul><li><ol start="3"><li>v1.COMMON.EX.002</li></ol></li></ul></li> <li><p>ОСНОВНИЙ СЦЕНАРІЙ:</p></li> <li><ul><li><ol><li>Користувач запитує дані про організацію.</li></ol></li></ul></li> <li><ul><li><ol start="2"><li>Система ідентифікує користувача (можлива v1.NOT_LOGGED.EX.004)</li></ol></li></ul></li> <li><ul><li><ol start="3"><li>Система перевіряє, чи існує організація (можлива v1.COMMON.EX.001)</li></ol></li></ul></li> <li><ul><li><ol start="4"><li>Система знаходить дані про організацію.</li></ol></li></ul></li> <li><ul><li><ol start="5"><li>Система авторизує користувача для отримання даних про організацію (можлива v1.COMMON.EX.002)</li></ol></li></ul></li> <li><ul><li><ol start="6"><li>Система надсилає користувачу дані про організацію.</li></ol></li></ul></li> <li><ul><li><ol start="7"><li>Користувач завершує взаємодію.</li></ol></li></ul></li></ul> <p><img src="https://user-images.githubusercontent.com/71893656/140224356-f27bc51b-7757-4a55-97f7-6fb9fdf41211.png" alt="image"> <br><br></p> <ul><li><p>ID: v1.ORGANIZATION.003</p></li> <li><p>НАЗВА: Змінити дані про організацію</p></li> <li><p>УЧАСНИКИ: Користувач, Система</p></li> <li><p>ПЕРЕДУМОВИ:</p></li> <li><ul><li><ol><li>Користувач авторизований у системі.</li></ol></li></ul></li> <li><ul><li><ol start="2"><li>Користувач має доступ до запитаної організації.</li></ol></li></ul></li> <li><p>РЕЗУЛЬТАТ: Повідомлення про зміну даних організації.</p></li> <li><p>ВИКЛЮЧНІ СИТУАЦІЇ:</p></li> <li><ul><li><ol><li>v1.NOT_LOGGED.EX.004</li></ol></li></ul></li> <li><ul><li><ol start="2"><li>v1.COMMON.EX.001</li></ol></li></ul></li> <li><ul><li><ol start="3"><li>v1.COMMON.EX.002</li></ol></li></ul></li> <li><ul><li><ol start="4"><li>v1.COMMON.EX.003</li></ol></li></ul></li> <li><p>ОСНОВНИЙ СЦЕНАРІЙ:</p></li> <li><ul><li><ol><li>Користувач надсилає запит на створення організації.</li></ol></li></ul></li> <li><ul><li><ol start="2"><li>Система шукає користувача у базі даних користувачів та ідентифікує його (можлива v1.NOT_LOGGED.EX.004)</li></ol></li></ul></li> <li><ul><li><ol start="3"><li>Система надає користувачу форму для заповнення даних про організацію.</li></ol></li></ul></li> <li><ul><li><ol start="4"><li>Користувач надає у формі потрібні дані про організацію.</li></ol></li></ul></li> <li><ul><li><ol start="5"><li>Система перевіряє правильність надісланих даних (можлива v1.COMMON.EX.003)</li></ol></li></ul></li> <li><ul><li><ol start="6"><li>Система створює організацію.</li></ol></li></ul></li> <li><ul><li><ol start="7"><li>Система надсилає користувачу дані про створення організації.</li></ol></li></ul></li> <li><ul><li><ol start="8"><li>Користувач завершує взаємодію.</li></ol></li></ul></li></ul> <p><img src="https://user-images.githubusercontent.com/71893656/140228766-449b96d8-d55a-44f6-b80f-dbd5d7554840.png" alt="image"> <br><br></p> <ul><li>ID: v1.ORGANIZATION.004</li></ul> <div class="language-md extra-class"><pre class="language-md"><code>@startuml
+
+<span class="token code keyword">    left header</span>
+
+<span class="token code keyword">        &lt;font color=000 size=18&gt;&lt;b&gt;ID:&lt;/b&gt; v1.ORGANIZATION.004</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;НАЗВА:&lt;/b&gt; Створити опитування
+        &lt;font color=000 size=16&gt;&lt;b&gt;УЧАСНИКИ:&lt;/b&gt; Користувач, Система</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;ПЕРЕДУМОВИ:&lt;/b&gt;
+        &lt;font color=000 size=16&gt;1.Користувач авторизований у системі.
+        &lt;font color=000 size=16&gt;2.Користувач має доступ до запитаної організації.</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;РЕЗУЛЬТАТ:&lt;/b&gt; Повідомлення про створення опитування.</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;ВИКЛЮЧНІ СИТУАЦІЇ:&lt;/b&gt;
+        &lt;font color=000 size=16&gt;v1.NOT_LOGGED.EX.004
+        &lt;font color=000 size=16&gt;v1.COMMON.EX.001
+        &lt;font color=000 size=16&gt;v1.COMMON.EX.002
+        &lt;font color=000 size=16&gt;v1.COMMON.EX.003</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;ОСНОВНИЙ СЦЕНАРІЙ:&lt;/b&gt;</span>
+
+<span class="token code keyword">    end header</span>
+
+<span class="token code keyword">    |Користувач|
+        start
+        :Користувач авторизується
+        в системі;</span>
+
+<span class="token code keyword">        :Користувач відкриває
+        форму запиту
+        створення опитування;</span>
+
+<span class="token code keyword">        :Користувач заповнює форму
+        запиту даними;</span>
+
+<span class="token code keyword">        :Користувач нажимає
+        кнопку &quot;Відправити запит&quot;;</span>
+
+<span class="token code keyword">    |Система|
+        :Система ідентифікує
+        користувача;
+        note right #ffaaaa
+        &lt;b&gt;Можлива&lt;/b&gt;
+        &lt;b&gt;v1.NOT_LOGGED.EX.004&lt;/b&gt;
+        end note</span>
+
+<span class="token code keyword">        :Система знаходить дані
+        про організацію;
+        note right #ffaaaa
+        &lt;b&gt;Можлива&lt;/b&gt;
+        &lt;b&gt;v1.COMMON.EX.001&lt;/b&gt;
+        end note</span>
+
+<span class="token code keyword">        :Система авторизує користувача
+        для створення опитування;
+        note right #ffaaaa
+        &lt;b&gt;Можлива&lt;/b&gt;
+        &lt;b&gt;v1.COMMON.EX.002&lt;/b&gt;
+        end note</span>
+
+<span class="token code keyword">        :Система перевіряє
+        правильність надісланих даних;
+        note right #ffaaaa
+        &lt;b&gt;Можлива&lt;/b&gt;
+        &lt;b&gt;v1.COMMON.EX.003&lt;/b&gt;
+        end note</span>
+
+<span class="token code keyword">        :Система створює опитування;</span>
+
+<span class="token code keyword">        :Система надсилає
+        користувачу повідомлення про
+        створення опитування;</span>
+
+<span class="token code keyword">    |Користувач|
+        :Користувач отримує
+        повідомлення від системи
+        про створення опитування;</span>
+
+<span class="token code keyword">        :Користувач ознайомлюється
+        з повідомлення;</span>
+
+<span class="token code keyword">        :Користувач закриває
+        повідомлення від системи;</span>
+
+<span class="token code keyword">        :Користувач завершує
+        взаємодію;
+        stop;</span>
+
+@enduml
+</code></pre></div><p>яка буде відображена наступним чином:</p> <p><img src="https://user-images.githubusercontent.com/71709401/140643836-9a3723b4-5fa9-4b1e-af1b-8b1dc9b6bb4b.png" alt="v1.ORGANIZATION.004"> <br><br></p> <ul><li>ID: v1.ORGANIZATION.005</li></ul> <div class="language-md extra-class"><pre class="language-md"><code>@startuml
+
+<span class="token code keyword">    left header</span>
+
+<span class="token code keyword">        &lt;font color=000 size=18&gt;&lt;b&gt;ID:&lt;/b&gt; v1.ORGANIZATION.005</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;НАЗВА:&lt;/b&gt; Змінити дані про опитування
+        &lt;font color=000 size=16&gt;&lt;b&gt;УЧАСНИКИ:&lt;/b&gt; Користувач, Система</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;ПЕРЕДУМОВИ:&lt;/b&gt;
+        &lt;font color=000 size=16&gt;1.Користувач авторизований у системі.
+        &lt;font color=000 size=16&gt;2.Користувач має доступ до запитаної організації.</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;РЕЗУЛЬТАТ:&lt;/b&gt; Повідомлення про змінення даних опитування.</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;ВИКЛЮЧНІ СИТУАЦІЇ:&lt;/b&gt;
+        &lt;font color=000 size=16&gt;v1.NOT_LOGGED.EX.004
+        &lt;font color=000 size=16&gt;v1.COMMON.EX.001
+        &lt;font color=000 size=16&gt;v1.COMMON.EX.002
+        &lt;font color=000 size=16&gt;v1.COMMON.EX.003</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;ОСНОВНИЙ СЦЕНАРІЙ:&lt;/b&gt;</span>
+
+<span class="token code keyword">    end header</span>
+
+<span class="token code keyword">    |Користувач|
+        start
+        :Користувач авторизується
+        в системі;</span>
+
+<span class="token code keyword">        :Користувач відкриває
+        форму запиту
+        на змінення опитування;</span>
+
+<span class="token code keyword">        :Користувач заповнює форму
+        запиту даними;</span>
+
+<span class="token code keyword">        :Користувач нажимає
+        кнопку &quot;Відправити запит&quot;;</span>
+
+<span class="token code keyword">    |Система|
+        :Система отримує запит
+        від користувача;</span>
+
+<span class="token code keyword">        :Система ідентифікує
+        користувача;
+        note right #ffaaaa
+        &lt;b&gt;Можлива&lt;/b&gt;
+        &lt;b&gt;v1.NOT_LOGGED.EX.004&lt;/b&gt;
+        end note</span>
+
+<span class="token code keyword">        :Система знаходить дані
+        про організацію
+        та опитування;
+        note right #ffaaaa
+        &lt;b&gt;Можлива&lt;/b&gt;
+        &lt;b&gt;v1.COMMON.EX.001&lt;/b&gt;
+        end note</span>
+
+<span class="token code keyword">        :Система авторизує користувача
+        для змінення опитування;
+        note right #ffaaaa
+        &lt;b&gt;Можлива&lt;/b&gt;
+        &lt;b&gt;v1.COMMON.EX.002&lt;/b&gt;
+        end note</span>
+
+<span class="token code keyword">        :Система перевіряє
+        правильність надісланих даних;
+        note right #ffaaaa
+        &lt;b&gt;Можлива&lt;/b&gt;
+        &lt;b&gt;v1.COMMON.EX.003&lt;/b&gt;
+        end note</span>
+
+<span class="token code keyword">        :Система змінює опитування;</span>
+
+<span class="token code keyword">        :Система надсилає
+        користувачу повідомлення про
+        змінення опитування;</span>
+
+<span class="token code keyword">    |Користувач|
+        :Користувач отримує
+        повідомлення від системи
+        про змінення опитування;</span>
+
+<span class="token code keyword">        :Користувач ознайомлюється
+        з повідомлення;</span>
+
+<span class="token code keyword">        :Користувач закриває
+        повідомлення від системи;</span>
+
+<span class="token code keyword">        :Користувач завершує
+        взаємодію;
+        stop;</span>
+
+@enduml
+</code></pre></div><p>яка буде відображена наступним чином:</p> <p><img src="https://user-images.githubusercontent.com/71709401/140644638-3b8d6837-e7e7-48e7-97c4-7d961793b3fd.png" alt="image"></p> <ul><li>ID: v1.ORGANIZATION.006</li></ul> <div class="language-md extra-class"><pre class="language-md"><code>@startuml
+
+<span class="token code keyword">    left header</span>
+
+<span class="token code keyword">        &lt;font color=000 size=18&gt;&lt;b&gt;ID:&lt;/b&gt; v1.ORGANIZATION.006</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;НАЗВА:&lt;/b&gt; Отримати результати опитування
+        &lt;font color=000 size=16&gt;&lt;b&gt;УЧАСНИКИ:&lt;/b&gt; Користувач, Система</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;ПЕРЕДУМОВИ:&lt;/b&gt;
+        &lt;font color=000 size=16&gt;1.Користувач авторизований у системі.
+        &lt;font color=000 size=16&gt;2.Користувач має доступ до запитаної організації.</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;РЕЗУЛЬТАТ:&lt;/b&gt; Результати опитування</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;ВИКЛЮЧНІ СИТУАЦІЇ:&lt;/b&gt;
+        &lt;font color=000 size=16&gt;v1.NOT_LOGGED.EX.004
+        &lt;font color=000 size=16&gt;v1.COMMON.EX.001
+        &lt;font color=000 size=16&gt;v1.COMMON.EX.002</span>
+
+<span class="token code keyword">        &lt;font color=000 size=16&gt;&lt;b&gt;ОСНОВНИЙ СЦЕНАРІЙ:&lt;/b&gt;</span>
+
+<span class="token code keyword">    end header</span>
+
+<span class="token code keyword">    |Користувач|
+        start
+        :Користувач авторизується
+        в системі;</span>
+
+<span class="token code keyword">        :Користувач відкриває
+        форму запиту
+        результатів опитування;</span>
+
+<span class="token code keyword">        :Користувач нажимає
+        кнопку &quot;Відправити запит&quot;;</span>
+
+<span class="token code keyword">    |Система|
+        :Система отримує запит
+        від користувача;</span>
+
+<span class="token code keyword">        :Система ідентифікує
+        користувача;
+        note right #ffaaaa
+        &lt;b&gt;Можлива&lt;/b&gt;
+        &lt;b&gt;v1.NOT_LOGGED.EX.004&lt;/b&gt;
+        end note</span>
+
+<span class="token code keyword">        :Система перевіряє
+        рівень доступу користувача;</span>
+
+<span class="token code keyword">        :Система знаходить дані
+        про організацію
+        та опитування;
+        note right #ffaaaa
+        &lt;b&gt;Можлива&lt;/b&gt;
+        &lt;b&gt;v1.COMMON.EX.001&lt;/b&gt;
+        end note</span>
+
+<span class="token code keyword">        :Система авторизує
+        користувача для отримання
+        результатів опитування;
+        note right #ffaaaa
+        &lt;b&gt;Можлива&lt;/b&gt;
+        &lt;b&gt;v1.COMMON.EX.002&lt;/b&gt;
+        end note</span>
+
+<span class="token code keyword">        :Система надсилає
+        користувачу результати
+        опитування;</span>
+
+<span class="token code keyword">    |Користувач|
+        :Користувач отримує
+        повідомлення з результатами
+        від системи;</span>
+
+<span class="token code keyword">        :Користувач ознайомлюється
+        з повідомленням;</span>
+
+<span class="token code keyword">        :Користувач закриває
+        повідомлення від системи;</span>
+
+<span class="token code keyword">        :Користувач завершує
+        взаємодію;
+        stop;</span>
+
+@enduml
+</code></pre></div><p>яка буде відображена наступним чином:</p> <p><img src="https://user-images.githubusercontent.com/71709401/140646001-f0309c5d-8c78-41a4-8291-bbde7dc487ca.png" alt="image"></p> <ul><li>ID: v1.NOT_LOGGED.EX.004</li></ul> <center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;"><img src="https://www.plantuml.com/plantuml/svg/fLJBJi9G4Dtx5VC1ffR4bJpYGa9CZ6vSk3EW9PeW64GNXeLAZAxK60JZMrouST4W11HeV-7C7pctnT16q4QQtjxSrvbpvipjx4uXcI_iRcKcYEGboXZf0cqOoNKZxuoT9vBEPGkqbilayb5TrsbdSz-8XlHO91MRdvk9JALYj1VI5fUMLnUM4edud1PVqNHzEX00xd61AYvnuGBXaYjeyB5yEsZp4Tg41Ym-v2CkmLQ33fyJUcZ2H5qsM7o0DbgmK9UPdlJli0YVxaB_e2pn2SnWb5xmAgIUXTerRd3T9tRp4t2IP9Sp8sowC2aO_YEky2IjB97ky23YtHX_dnv6mia5ZKX66n_49UB30KskQ042-NK9jkEAu7MS9bCj2M0hY_vhXXOiMofJLSdKBTvG4rzgVJyULH15I_gkK6fAk9ug3Lj2MNxAJNV5KqYIbF5AgS_UoAxxxalHdxdYGADprGR36PBwCeM3oUMX8HH3UxZ60KfWiPuZuyaEV-iSKef5dxm7ML30NIufYVRlVda81dNESsHSCQDC4nbL1Omc7_2fAwIkIf_BijCIcXK-2tjDpcs79sQbAkId-WK0" alt="uml diagram"></center> <ul><li>ID: v1.COMMON.EX.001</li></ul> <center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;"><img src="https://www.plantuml.com/plantuml/svg/lPJBJi9G48RtFCKy0Abbooqawi85idKBKg89KWFLXM719KPDZ19J2q45nOKR5qqZ4HNAAyoyaNFQcagiaK1YqwRjkSp_pJ_JfYfQjgmTx1L307m259M21ZjADg-KdNVdY1VKaWRRQb4j9sHPXihkaPA8oCbuBhcn5eslv99m695MC-bqPbDQtv9aEJBNPhp35hRn2bjk4EoZZHOP-CBtCOweWIF0ATNG1dUSwjJaqGaP_DIWSy1ND77gB3LnmlTZuDtUutmGZ_Z460yCqy4kTZoKBjgiEt9accYXIITXu5NE20uPpuJvulVn6k_vqbdf5dkShglnz-uW2E3aB2Pm9ZXxMmoBTF4Dg0bKzmd9a1RL-EwgvJbAHXZeBA0K2-aAPuGhRNRb1fznm3KO1BR11yUSiCxbCgtW4Icb_4ntLsShMlMvdG_3Vuq2zuSfuf4E-FxJC_Q0nOEv_J3BP13xGWweM7M6jCSJeZl675__DwpVd6IWjcWZ75ADJbqaIyGadLVQB6ZGHUoxy-f-B9JYKl5_wHC0" alt="uml diagram"></center> <ul><li>ID: v1.COMMON.EX.002</li></ul> <center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;"><img src="https://www.plantuml.com/plantuml/svg/lPIzJi9G5CTtdk8-WAd5aQ-Gg8C3ihg2b6Y2r41rC0m88Jef8GW45H075uUcWKWKsbVudpVoj0MX4P8c9ZQzRUuzf-V_EnzflAYb2jh5MIuW1Dz2v9Ii9awKL4OfE7ldYcJLl2QErPnQYCgoB8gdLqeqACSYwTZ1NYYodOw9ow2qcqmaaeVI_f4aopk-FiOpwcYZWReR10rgOKGrJF252LKm4HZ1f6kgK1MMm2Tlocnn3mpeT0FTyR4VEcPig_cJViKRYxymGWTTTEO0tTy2MuAzd1ECCMKvV_7xUC20LvELdj3Z91SQtcWmLdFcnKSVd8fb5y1dnf8_91kdpJYFUCUGan_EWVemNGf-JvbWp55dT2zWiRJf9VonhVI5gXk0b7p6CqibR-wb9ROpXijjI71VT3iUDTVMm9QqDc0lm_mXWV22UCr4b8I7jCSMzi2KgZRj_s1jAYJpjDdRm9ZATEiI6VP0KPCzJTPhqLrujV3gUJWGvqxnJ-0R" alt="uml diagram"></center> <ul><li>ID: v1.COMMON.EX.003</li></ul> <center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;"><img src="https://www.plantuml.com/plantuml/svg/jPJDJi9058NtVOfv05DBtF4N4dNX0jcw1IdH1Ac1wiAmu2T4Lqe85e8AYWitBYg1Y0Bb5SwyaNVQ4YJKs9ZOfEdCt9bplpdtfh62diphPoTPIMBqPDMCpexKP5hDstFx2MUqdCuEjQoMZoYAmWh75seae4J3gUZUJZ2ycOgoyu2ydOZ74_loxe6iA5k-3kC1TRJGGDqHGOCR6F8QnfXWp2iOCtloXXat68OmnS2Vz3DUIFo9KhJHGTjDq875IoHTvXLUnG0clznWjCjUmGXJcFxaUxZ58xrDIdIFBjt1IV7xQIy6HZSR480Tm3iiiOmPZJyOhp9UNW9oG_vhZXbf3hb1QXEHRqsvwkMsxCyFuKMBlBZ3A_faVDyrl2Vk8gfAtodb7H75ZDymp8dFOaxChVWYjg0Wj9hB8OOkYPfBhpHeSRLynIMltTdBQP1HCvX2ZpSPFjST8WCmz-PTglm5FBGWzIXBSGMmIm7H0bGC0Vc_D3_vHXmjqI0OyHA_SaW6r9Na6-sqx1ww3dttMJiDILACAaF_aIy0" alt="uml diagram"></center> <ul><li>ID:	v1.NOT_LOGGED.EX.001</li></ul> <center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;">
+@startuml
+<div class="language- extra-class"><pre><code>left header
+     &lt;font color=000 size=10&gt;&lt;b&gt;ID:&lt;/b&gt; v1.NOT_LOGGED.EX.001
+     &lt;font color=000 size=10&gt;&lt;b&gt;НАЗВА:&lt;/b&gt; Відхилити запит на реєстрацію
+     &lt;font color=000 size=10&gt;&lt;b&gt;УЧАСНИКИ:&lt;/b&gt; Користувач, Система 
+     &lt;font color=000 size=10&gt;&lt;b&gt;ПЕРЕДУМОВИ:&lt;/b&gt;
+     &lt;font color=000 size=10&gt;Користувач не зареєстрований у системі.
+     &lt;font color=000 size=10&gt;Клієнт надіслав хибні дані реєстрації.
+     &lt;font color=000 size=10&gt;&lt;b&gt;РЕЗУЛЬТАТ:&lt;/b&gt; Повідомлення про відхилення реєстрації
+ end header
+ 
+ |Система|
+     start
+     : Надає користувачу повідомлення 
+     про відхилення реєстрації;
+     
+ |Користувач|
+     : Отримує повідомлення про
+     відхилення реєстрації;
+     
+ |Система|
+     : Завершує взаємодію;
+     stop;
+</code></pre></div><p>@enduml
+</p></center><p></p> <ul><li>ID:	v1.NOT_LOGGED.EX.002</li></ul> <center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;">
+@startuml
+<div class="language- extra-class"><pre><code>left header
+     &lt;font color=000 size=10&gt;&lt;b&gt;ID:&lt;/b&gt; v1.NOT_LOGGED.EX.002
+     &lt;font color=000 size=10&gt;&lt;b&gt;НАЗВА:&lt;/b&gt; Відхилити спробу авторизації через помилку ідентифікації
+     &lt;font color=000 size=10&gt;&lt;b&gt;УЧАСНИКИ:&lt;/b&gt; Користувач, Система 
+     &lt;font color=000 size=10&gt;&lt;b&gt;ПЕРЕДУМОВИ:&lt;/b&gt;
+     &lt;font color=000 size=10&gt;Користувач не авторизований у системі.
+     &lt;font color=000 size=10&gt;Система не змогла ідентифікувати користувача.
+     &lt;font color=000 size=10&gt;&lt;b&gt;РЕЗУЛЬТАТ:&lt;/b&gt; Повідомлення про помилку спроби авторизації
+ end header
+ 
+ |Система|
+     start
+     : Надає користувачу повідомлення про відхилення 
+     авторизації через помилку ідентифікації;
+     
+ |Користувач|
+     : Отримує повідомлення про відхилення 
+     авторизації через помилку ідентифікації;
+     
+ |Система|
+     : Завершує взаємодію;
+     stop;
+</code></pre></div><p>@enduml<br></p></center><p></p> <ul><li>ID:	v1.NOT_LOGGED.EX.003</li></ul> <center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;">
+@startuml
+<div class="language- extra-class"><pre><code>left header
+     &lt;font color=000 size=10&gt;&lt;b&gt;ID:&lt;/b&gt; v1.NOT_LOGGED.EX.003
+     &lt;font color=000 size=10&gt;&lt;b&gt;НАЗВА:&lt;/b&gt; Відхилити спробу авторизації через помилку аутентифікації
+     &lt;font color=000 size=10&gt;&lt;b&gt;УЧАСНИКИ:&lt;/b&gt; Користувач, Система 
+     &lt;font color=000 size=10&gt;&lt;b&gt;ПЕРЕДУМОВИ:&lt;/b&gt;
+     &lt;font color=000 size=10&gt;Клієнт не авторизований у системі.
+     &lt;font color=000 size=10&gt;Система не змогла аутентифікувати користувача.
+     &lt;font color=000 size=10&gt;&lt;b&gt;РЕЗУЛЬТАТ:&lt;/b&gt; Повідомлення про спроби авторизації
+ end header
+ 
+ |Система|
+     start
+     : Надає користувачу повідомлення про відхилення
+     авторизації через помилку аутентифікації;
+     
+ |Користувач|
+     : Отримує повідомлення про відхилення 
+     авторизації через помлку аутентифікації;
+     
+ |Система|
+     : Знижує ступінь довіри до користувача;
+     
+     : Завершує взаємодію;
+     stop;
+</code></pre></div><p>@enduml
+</p></center><p></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Останнє оновлення:</span> <span class="time">11/22/2021, 12:04:52 AM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/survey-expert/assets/js/app.40677592.js" defer></script><script src="/survey-expert/assets/js/2.b3f7f95f.js" defer></script><script src="/survey-expert/assets/js/24.dcf06088.js" defer></script>
+  </body>
+</html>
